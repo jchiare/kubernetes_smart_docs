@@ -1,0 +1,14 @@
+.DS_STORE
+venv
+output.txt
+
+*.pyc
+__pycache__/
+
+instance/
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+*.egg-info/
