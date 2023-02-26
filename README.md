@@ -29,6 +29,15 @@ Run the flask app in development mode
 
 2. `flask --app kubernetes_smart_docs/app run`
 
+## Todo
+
+- [ ] A LOT!
+- [ ] Unit/Integration test on flask server
+- [ ] Caching for API requests
+- [ ] Save word embedding in DB instead of csv
+- [ ] Use a modern frontend instead of vanilla JS
+- [ ] Add formatting / linting
+
 ### License
 
 The Kubernetes Smart Doc is licensed under the MIT license. See the LICENSE file for details.
