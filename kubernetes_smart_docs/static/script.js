@@ -1,5 +1,3 @@
-console.log("script ran");
-
 const userQuestionEl = document.getElementById("user-question");
 const copyUserQuestion = document.getElementById("copy-user-question");
 const aiResultText = document.getElementById("ai-result-text");
@@ -27,8 +25,6 @@ function addSources(sources) {
 async function submitButton() {
   const userQuestion = userQuestionEl.value;
   const url = "http://127.0.0.1:5000/api/reply/";
-  const testingUrl =
-    "https://webhook.site/6f2636a6-abc8-41ff-a21a-8e1c9a8a681d";
   const data = {
     method: "POST",
     body: JSON.stringify({ text: userQuestion }),
@@ -38,7 +34,7 @@ async function submitButton() {
   };
   const response = await fetch(url, data);
   const result = await response.json();
-  console.log(result);
+
   addAIResponse(result.response, userQuestion);
   addSources(result.sources);
 }
@@ -55,13 +51,3 @@ userQuestionEl.onkeydown = function (event) {
     editSubmitButton("Submitted ...", true);
   }
 };
-
-// const reader = response.body.getReader();
-
-// while (true) {
-//   const { value, done } = await reader.read();
-//   if (done) break;
-//   console.log("Received", value);
-// }
-
-// console.log("Response fully received");
