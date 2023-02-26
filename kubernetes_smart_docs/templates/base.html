@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<title>Kubernetes Smart Docs</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+<body>
+  <h1 class="title">Kubernetes Smart Docs</h1>
+  <main class="content">
+    <div class="container">
+      <textarea
+        id="user-question"
+        placeholder="Why to use a stateful set over a deployment?"
+        autofocus
+      ></textarea>
+      <button id="submit-button" onclick="submitButton()">Submit</button>
+    </div>
+    <div class="ai-response">
+      <span id="after-question-text" class="hidden">Question: </span>
+      <p id="copy-user-question"></p>
+      <span id="after-question-text" class="hidden">AI Response: </span>
+      <p id="ai-result-text"></p>
+    </div>
+    <div class="sources">
+      <p style="font-weight: bold">Sources:</p>
+      <p class="source" id="source-1"></p>
+      <p class="source" id="source-2"></p>
+    </div>
+  </main>
+  <script src="{{ url_for('static', filename='script.js') }}" async></script>
+</body>
