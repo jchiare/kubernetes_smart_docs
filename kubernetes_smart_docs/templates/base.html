@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <title>Kubernetes Smart Docs</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+<link
+  rel="shortcut icon"
+  type="image/x-icon"
+  href="{{ url_for('static', filename='favicon.ico') }}"
+/>
 <body>
   <h1 class="title">Kubernetes Smart Docs</h1>
   <main class="content">
     <div class="container">
       <textarea
         id="user-question"
-        placeholder="Why to use a stateful set over a deployment?"
+        placeholder="What is a pod?"
         autofocus
       ></textarea>
       <button id="submit-button" onclick="submitButton()">Submit</button>
