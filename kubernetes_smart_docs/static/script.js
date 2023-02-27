@@ -24,7 +24,7 @@ function addSources(sources) {
 
 async function submitButton() {
   const userQuestion = userQuestionEl.value;
-  const url = "http://localhost:8000/api/reply/";
+  const url = "/api/reply/";
   const data = {
     method: "POST",
     body: JSON.stringify({ text: userQuestion }),

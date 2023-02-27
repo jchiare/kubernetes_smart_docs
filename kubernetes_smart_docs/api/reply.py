@@ -19,4 +19,6 @@ def ai_response():
     prompt = construct_prompt(data['text'],parsed_related_articles)
     response = AI_response(prompt)
     
+    print(f"Response from openAI API: {response}")
+    
     return {'response':response,'sources':parsed_related_articles.tolist()}
