@@ -5,7 +5,7 @@ class OpenAIClient():
     TESTING_COMPLETIONS_MODEL = "text-curie-001"
     EMBEDDING_MODEL = "text-embedding-ada-002"
     
-    def get_completion(prompt: str, model: str=TESTING_COMPLETIONS_MODEL) -> list[float]:
+    def get_completion(prompt: str, model: str=COMPLETIONS_MODEL) -> list[float]:
         response = Completion.create(
                 prompt=prompt,
                 temperature=0.0,

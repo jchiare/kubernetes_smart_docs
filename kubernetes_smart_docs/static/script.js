@@ -14,6 +14,7 @@ function addAIResponse(response, question) {
   copyUserQuestion.innerText = question;
   aiSectionEl.style.display = "block";
   editSubmitButton("Submit");
+  userQuestionEl.value = "";
 }
 
 function addSources(sources) {
